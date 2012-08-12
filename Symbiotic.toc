@@ -1,0 +1,7 @@
+## Interface: 50001
+## Author: p3lim
+## Version: @project-version@
+## Title: Symbiotic
+## Notes: Shows a comparing tooltip on players with information regarding Symbiosis
+
+Symbiotic.lua
