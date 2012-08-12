@@ -55,7 +55,7 @@ local function UpdateSymbiosis(self)
 				local spec = GetSpecialization()
 				if(spec) then
 					ShoppingTooltip1:SetOwner(self, 'ANCHOR_NONE')
-					ShoppingTooltip1:SetPoint('BOTTOMRIGHT', self, 'BOTTOMLEFT', -1, 0)
+					ShoppingTooltip1:SetPoint('BOTTOMRIGHT', self, 'BOTTOMLEFT')
 					ShoppingTooltip1:SetSpellByID(gainSpells[class][spec])
 
 					ShoppingTooltip1TextRight1:SetText('Symbiosis')
