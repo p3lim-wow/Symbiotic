@@ -47,10 +47,10 @@ local gainSpells = {
 }
 
 local function UpdateSymbiosis(self)
-	local __, unit = self:GetUnit()
+	local _, unit = self:GetUnit()
 	if(unit) then
 		if(IsShiftKeyDown()) then
-			local __, __, class = UnitClass(unit)
+			local _, _, class = UnitClass(unit)
 			if(UnitIsPlayer(unit) and class ~= 11) then
 				local spec = GetSpecialization()
 				if(spec) then
@@ -89,7 +89,7 @@ Handler:SetScript('OnEvent', function(self, event, GUID)
 	local tooltip = GameTooltip
 	if(not tooltip:IsShown()) then return end
 
-	local __, unit = tooltip:GetUnit()
+	local _, unit = tooltip:GetUnit()
 	if(not unit) then return end
 
 	if(event == 'INSPECT_READY' and UnitGUID(unit) == GUID) then
@@ -99,7 +99,7 @@ Handler:SetScript('OnEvent', function(self, event, GUID)
 			ShoppingTooltip2:SetPoint('BOTTOMRIGHT', ShoppingTooltip1, 'BOTTOMLEFT')
 			ShoppingTooltip2:SetSpellByID(grantSpells[id])
 
-			local __, spec, __, __, __, __, class = GetSpecializationInfoByID(id)
+			local _, spec, _, _, _, _, class = GetSpecializationInfoByID(id)
 			local color = (CUSTOM_CLASS_COLORS or RAID_CLASS_COLORS) [class]
 			ShoppingTooltip2TextRight1:SetText(spec)
 			ShoppingTooltip2TextRight1:SetTextColor(color.r, color.g, color.b)
